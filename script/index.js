@@ -46,7 +46,7 @@ let initialCards = [
 
 function addElement (titleValue, imageValue) {
     let createCard = elementTemplate.cloneNode(true);
-    createCard.querySelector('.element__img').src = imageValue;
+    createCard.querySelector('.element__image').src = imageValue;
     createCard.querySelector('.element__title').textContent = titleValue;
     createCard.querySelector('.element__like')
         .addEventListener('click', function (event) {
@@ -56,7 +56,7 @@ function addElement (titleValue, imageValue) {
         .addEventListener('click', function (event) {
             event.target.closest('.element').remove ();
         });
-    createCard.querySelector('.element__img')
+    createCard.querySelector('.element__image')
         .addEventListener('click', openPopupImage);
     return createCard;
 }
@@ -77,7 +77,7 @@ function openPopupAdd () {
 
 function openPopupImage (image) {
     let element = image.target.closest('.element');
-    let createCardImage = element.querySelector('.element__img').src;
+    let createCardImage = element.querySelector('.element__image').src;
     let createCardTitle = element.querySelector('.element__title').textContent;
     popupImage.querySelector('.popup__fulled-image').src = createCardImage;
     popupImage.querySelector('.popup__title-image').textContent = createCardTitle;
