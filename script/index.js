@@ -2,9 +2,9 @@ let content = document.querySelector('.content')
 let profileEditButton = content.querySelector('.profile__edit-button');
 let profileAddButton = content.querySelector('.profile__add-button');
 let popup = Array.from(document.querySelectorAll('.popup'));
-let popupEdit = document.querySelector('.popup__profile_type_edit');
-let popupAdd = document.querySelector('.popup__profile_type_add');
-let popupImage = document.querySelector('.popup__element_type_image');
+let popupEdit = document.querySelector('.popup__profile-edit');
+let popupAdd = document.querySelector('.popup__profile-add');
+let popupImage = document.querySelector('.popup__element-image');
 let popupCloseButton = popup.map((item) => item.querySelector('.popup__close-button'));
 let fromEditElement = popup.find((item) => item.querySelector('.popup__form-edit'));
 let fromAddElement = popup.find((item) => item.querySelector('.popup__form-add'));
