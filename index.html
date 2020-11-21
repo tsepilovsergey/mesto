@@ -33,10 +33,12 @@
         <div class="popup__container">
             <button class="popup__close-button" type="button"></button>
             <h3 class="popup__title">Редактировать профиль</h3>
-            <form class="popup__form popup__form-edit" name="formEdit">
-                <input class="popup__text popup__text_type_name" name="popupName" type="text" placeholder="Введите имя">
-                <input class="popup__text popup__text_type_description" name="popupDescription" type="text" placeholder="Введите описание">
-                <button class="popup__submit-button" type="submit">
+            <form class="popup__form popup__form-edit" name="formEdit" novalidate>
+                <input class="popup__input popup__input_type_name" name="popupName" type="text" id="name" autocomplete="off" placeholder="Имя" minlength="2" maxlength="40" required>
+                <span id="name-error"></span>
+                <input class="popup__input popup__input_type_description" name="popupDescription" type="text" id="description" autocomplete="off" placeholder="О себе" minlength="2" maxlength="200" required>
+                <span id="description-error"></span>
+                <button class="popup__button" type="submit" disabled>
                     Сохранить
                 </button>
             </form>
@@ -46,10 +48,12 @@
         <div class="popup__container">
             <button class="popup__close-button" type="button"></button>
             <h3 class="popup__title">Новое место</h3>
-            <form class="popup__form popup__form-add" name="formAdd">
-                <input class="popup__text popup__text_type_title" name="popupTitle" type="text" placeholder="Название">
-                <input class="popup__text popup__text_type_link" name="popupLink" type="text" placeholder="Ссылка на картинку">
-                <button class="popup__submit-button" type="submit">
+            <form class="popup__form popup__form-add" name="formAdd" novalidate>
+                <input class="popup__input popup__input_type_title" name="popupTitle" type="text" id="title" autocomplete="off" placeholder="Название" minlength="2" maxlength="30" required>
+                <span id="title-error"></span>
+                <input class="popup__input popup__input_type_link" name="popupLink" type="url" id="link" autocomplete="off" placeholder="Ссылка на картинку" required>
+                <span id="link-error"></span>
+                <button class="popup__button" type="submit" disabled>
                     Создать
                 </button>
             </form>
@@ -73,5 +77,6 @@
         </li>
     </template>
     <script src="./script/index.js"></script>
+    <script src="./script/validate.js"></script>
 </body>
 </html>
