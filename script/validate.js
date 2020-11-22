@@ -1,4 +1,4 @@
-const ValidityState = {
+const validityState = {
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__button',
@@ -34,7 +34,7 @@ const checkInputValidity = (form, input, obj) => {
         showInputError(form, input, input.validationMessage, obj);
     } else {
         hideInputError(form, input, obj);
-    };
+    }
 };
 
 const showInputError = (form, input, errorMessage, obj) => {
@@ -44,17 +44,24 @@ const showInputError = (form, input, errorMessage, obj) => {
     error.classList.add(obj.errorClass);
 };
 
-const hideInputError = (formElement, input, obj) => {
-    const error = formElement.querySelector(`#${input.id}-error`);
+const hideInputError = (form, input, obj) => {
+    const error = form.querySelector(`#${input.id}-error`);
     input.classList.remove(obj.inputInvalidClass);
     error.textContent = '';
     error.classList.remove(obj.errorClass);
-}
+};
+
+const resetValidationState = (form, obj) => {
+    const input = Array.from(form.querySelectorAll(obj.inputSelector));
+    input.forEach((input) => {
+        hideInputError(form, input, obj);
+    });
+};
 
 const hasInvalidInput = (inputList) => {
     return inputList.some((input) => {
         return !input.validity.valid;
-    })
+    });
 };
 
 const toggleButtonState = (inputList, sumbitButton, obj) => {
@@ -64,6 +71,7 @@ const toggleButtonState = (inputList, sumbitButton, obj) => {
     } else {
         sumbitButton.classList.remove(obj.inactiveButtonClass);
         sumbitButton.disabled = false;
-    };
+    }
 };
-enableValidation(ValidityState);
+
+enableValidation(validityState);
