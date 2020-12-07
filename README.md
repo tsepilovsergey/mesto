@@ -1,4 +1,4 @@
-# Проект 6: Место
+# Проект 7: Место
 
 ### Обзор
 * Интро
@@ -14,7 +14,11 @@
 
 **Figma**
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/XNaGNEZD5NEjeyJzAT4gMb/JavaScript.-Sprint-6)
+* [Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4);
+
+* [Ссылка на макет в Figma](https://www.figma.com/file/nlYpT4VhFiwimn2YlncrcF/JavaScript.-Sprint-5);
+
+* [Ссылка на макет в Figma](https://www.figma.com/file/XNaGNEZD5NEjeyJzAT4gMb/JavaScript.-Sprint-6).
 
 **Картинки**
 
@@ -28,12 +32,18 @@
 * использование ветвления;
 * валидация всех форм;
 * возможность закрытия попапа кликом на оверлей и нажатием на Esc;
+* изменение и сохранение элементов карточки при помощи кнопки ENTER;
 * простая, удобная структура;
+* редактирование, сохранение/несохранение данных профиля;
 * использование разных шрифтов;
 * использование навигации, анимации;
-* доступность для пользователя.
+* доступность интерфейса для пользователя.
 
 ### Создан с помощью:
 1. Система контроля версий: Git Bash(командная строка), GitHub.
 2. Работа с Visual Studio Code, файловой структурой по БЭМ.
-3. Front-end: HTML, CSS, JavaScript.
+3. Front-end: HTML, CSS, JavaScript с разбиением на модули:
+   * Card.js;
+   * FormValidator.js;
+   * index.js.
+

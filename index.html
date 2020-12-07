@@ -68,7 +68,7 @@
     <div class="popup popup-image">
         <div class="popup__container-image">
             <button class="popup__close-button" type="button"></button>
-            <img class="popup__fulled-image" src="./images/element-kamchatka.jpg" alt="Картинка места">
+            <img class="popup__fulled-image" src="#" alt="Картинка места">
             <h3 class="popup__title-image">Камчатка</h3>
         </div>
     </div>
@@ -76,16 +76,19 @@
     <template id="element-template">
         <li class="element">
             <button class="element__trash" type="button"></button>
-            <img class="element__image" src="./images/element-kamchatka.jpg" alt="Картинка места">
-            <article class="element__description">
+            <img class="element__image" src="#" alt="Картинка места">
+            <div class="element__description">
                 <h2 class="element__title"></h2>
                 <button class="element__like" type="button"></button>
-            </article>
+            </div>
         </li>
     </template>
 
-    <script src="./script/index.js"></script>
-    <script src="./script/validate.js"></script>
+    <script type="module" src="./script/index.js"></script>
+    <script type="module" src="./script/Card.js"></script>
+    <script type="module" src="./script/FormValidator.js"></script>
+    <script type="module" src="./script/constants.js"></script>
+    <script type="module" src="./script/popup.js"></script>
 
 </body>
 
