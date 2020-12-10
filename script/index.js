@@ -14,7 +14,10 @@ import { validityState,
     titleInput, 
     linkInput, 
     initialCards, 
-    elementsContainer } from './constants.js';
+    elementsContainer, 
+    fullImage,
+    fullImageTitle,
+    popupImage } from './constants.js';
 
 function openPopupEdit () {
     nameInput.value = profileTitle.textContent;
@@ -24,8 +27,16 @@ function openPopupEdit () {
 }
 
 function openPopupAdd () {
+    titleInput.value = '';
+    linkInput.value = '';
     popupAddFormValidator.resetValidationState();
     openPopup(popupAdd);
+}
+
+function openPopupImage (name, link) {
+    fullImage.src = link;
+    fullImageTitle.textContent = name;
+    openPopup(popupImage);
 }
 
 function handleFormEditSubmit (event) {
@@ -37,18 +48,14 @@ function handleFormEditSubmit (event) {
 
 function handleFormAddSubmit (event) {
     event.preventDefault();
-    const card = new Card({name: titleInput.value, link: linkInput.value}, 'element-template');
-    const cardElement = card.generateCard();
-    elementsContainer.prepend(cardElement);
-    titleInput.value = '';
-    linkInput.value = '';
+    const card = new Card({name: titleInput.value, link: linkInput.value}, 'element-template', openPopupImage);
+    elementsContainer.prepend(card.generateCard());
     closePopup(popupAdd);
 }
 
 initialCards.forEach((item) => {
-    const card = new Card(item, 'element-template');
-    const cardElement = card.generateCard();
-    elementsContainer.append(cardElement);
+    const card = new Card(item, 'element-template', openPopupImage);
+    elementsContainer.append(card.generateCard());
 })
 
 const popupEditFormValidator = new FormValidator(popupEdit, validityState);

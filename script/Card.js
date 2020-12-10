@@ -1,11 +1,9 @@
-import { fullImage, fullImageTitle, popupImage } from './constants.js';
-import { openPopup } from './popup.js';
-
 export class Card {
-    constructor(data, cardSelestor) {
+    constructor(data, cardSelestor, openPopupImage) {
         this._name = data.name;
         this._link = data.link;
         this._cardSelestor = cardSelestor;
+        this._openPopupImage = openPopupImage;
     }
 
     _getTemplate() {
@@ -37,13 +35,6 @@ export class Card {
         this._element.querySelector('.element__like').classList.toggle('element__like_active');
     }
 
-    _setCardFull() {
-        fullImage.src = this._link;
-        fullImage.alt = this._name;
-        fullImageTitle.textContent = this._name;
-        openPopup(popupImage);
-    }
-
     _setEventListeners() {
         this._element.querySelector('.element__trash').addEventListener('click', () => {
             this._trashCard();
@@ -54,7 +45,7 @@ export class Card {
         });
 
         this._element.querySelector('.element__image').addEventListener('click', () => {
-            this._setCardFull();
+            this._openPopupImage(this._name, this._link);
         });
     }
 

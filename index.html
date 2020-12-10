@@ -38,9 +38,9 @@
             <button class="popup__close-button" type="button"></button>
             <h3 class="popup__title">Редактировать профиль</h3>
             <form class="popup__form popup__form-edit" name="formEdit" novalidate>
-                <input class="popup__input popup__input_type_name" name="popupName" type="text" id="name" autocomplete="off" placeholder="Имя" minlength="2" maxlength="40" required>
+                <input class="popup__input popup__input_type_name" name="popupName" type="text" id="name" autocomplete="off" minlength="2" maxlength="40" required>
                 <span id="name-error"></span>
-                <input class="popup__input popup__input_type_description" name="popupDescription" type="text" id="description" autocomplete="off" placeholder="О себе" minlength="2" maxlength="200" required>
+                <input class="popup__input popup__input_type_description" name="popupDescription" type="text" id="description" autocomplete="off" minlength="2" maxlength="200" required>
                 <span id="description-error"></span>
                 <button class="popup__button" type="submit" disabled>
                     Сохранить
@@ -69,7 +69,7 @@
         <div class="popup__container-image">
             <button class="popup__close-button" type="button"></button>
             <img class="popup__fulled-image" src="#" alt="Картинка места">
-            <h3 class="popup__title-image">Камчатка</h3>
+            <h3 class="popup__title-image"></h3>
         </div>
     </div>
 
@@ -85,10 +85,6 @@
     </template>
 
     <script type="module" src="./script/index.js"></script>
-    <script type="module" src="./script/Card.js"></script>
-    <script type="module" src="./script/FormValidator.js"></script>
-    <script type="module" src="./script/constants.js"></script>
-    <script type="module" src="./script/popup.js"></script>
 
 </body>
 
