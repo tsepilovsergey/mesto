@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
     <title>Mesto</title>
 </head>
 <body class="page">
-
     <header class="header">
-        <img class="header__logo" src="./images/header-logo.svg" alt="Место">
+        <img class="header__logo" src="<%=require('./images/header-logo.svg')%>" alt="Место">
     </header>
-
     <main class="content">
         <section class="profile">
-            <img class="profile__avatar" src="./images/profile-avatar.jpg" alt="Аватар">
+            <img class="profile__avatar" src="<%=require('./images/profile-avatar.jpg')%>" alt="Аватар">
             <div class="profile__info">
                 <h1 class="profile__title">Жак-Ив Кусто</h1>
                 <button class="profile__edit-button" type="button"></button>
@@ -22,25 +19,22 @@
             </div>
             <button class="profile__add-button" type="button"></button>
         </section>
-
         <section class="elements">
             <ul class="elements__item">
             </ul>
         </section>
     </main>
-
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020. Сергей Цепилов</p>
     </footer>
-
     <div class="popup popup-edit">
         <div class="popup__container">
             <button class="popup__close-button" type="button"></button>
             <h3 class="popup__title">Редактировать профиль</h3>
             <form class="popup__form popup__form-edit" name="formEdit" novalidate>
-                <input class="popup__input popup__input_type_name" name="popupName" type="text" id="name" autocomplete="off" minlength="2" maxlength="40" required>
+                <input class="popup__input popup__input_type_name" name="popupName" type="text" id="name" autocomplete="off" placeholder="Имя" minlength="2" maxlength="40" required>
                 <span id="name-error"></span>
-                <input class="popup__input popup__input_type_description" name="popupDescription" type="text" id="description" autocomplete="off" minlength="2" maxlength="200" required>
+                <input class="popup__input popup__input_type_description" name="popupDescription" type="text" id="description" autocomplete="off" placeholder="О себе" minlength="2" maxlength="200" required>
                 <span id="description-error"></span>
                 <button class="popup__button" type="submit" disabled>
                     Сохранить
@@ -48,7 +42,6 @@
             </form>
         </div>
     </div>
-
     <div class="popup popup-add">
         <div class="popup__container">
             <button class="popup__close-button" type="button"></button>
@@ -64,7 +57,6 @@
             </form>
         </div>
     </div>
-
     <div class="popup popup-image">
         <div class="popup__container-image">
             <button class="popup__close-button" type="button"></button>
@@ -72,7 +64,6 @@
             <h3 class="popup__title-image"></h3>
         </div>
     </div>
-
     <template id="element-template">
         <li class="element">
             <button class="element__trash" type="button"></button>
@@ -83,9 +74,5 @@
             </div>
         </li>
     </template>
-
-    <script type="module" src="./script/index.js"></script>
-
 </body>
-
 </html>

@@ -1,4 +1,4 @@
-# Проект 7: Место
+# Проект 8: Место
 
 ### Обзор
 * Интро
@@ -45,5 +45,11 @@
 3. Front-end: HTML, CSS, JavaScript с разбиением на модули:
    * Card.js;
    * FormValidator.js;
+   * Popup.js;
+   * PopupWithForm.js;
+   * PopupWithImage.js;
+   * Section.js;
+   * UserInfo.js;
    * index.js.
-
+4. Проект собран с помощью webpack.
+5. Использование парадигмы ООП в написании кода.
