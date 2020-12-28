@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
 
 module.exports = {
     entry: {
@@ -43,19 +43,20 @@ module.exports = {
                 test: /\.js$/,
                 use: "babel-loader",
                 exclude: "/node_modules/",
-            },
+            },             
         ],
-    },       
+    },
     devServer: {
         contentBase: path.resolve(__dirname, "./dist"),
         compress: true,
         port: 8080,
         open: true,
-    },
+    },       
     mode: "development",
     devtool: "source-map",
-    plugins: [new HtmlWebpackPlugin({
-        template: "./src/index.html",
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin()

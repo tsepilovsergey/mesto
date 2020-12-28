@@ -1,7 +1,7 @@
 {
   "name": "mesto",
   "version": "1.0.0",
-  "description": "* Интро\r * Figma\r * Картинки\r * GitHub Pages",
+  "description": "### Обзор * Интро * Figma * Картинки * GitHub Pages",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
