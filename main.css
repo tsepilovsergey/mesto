@@ -27,12 +27,12 @@
 .elements__item{display:grid;grid-template-columns:repeat(auto-fit,282px);grid-gap:18px;justify-content:center;margin:0;padding:0}@media screen and (max-width:767px){.elements__item{grid-template-columns:1fr;row-gap:20px}}
 .elements{max-width:882px;margin:auto;padding-top:51px}@media screen and (max-width:767px){.elements{max-width:282px;padding:36px 0 0}}
 .element__image{width:100%;height:282px;-o-object-fit:cover;object-fit:cover;display:block;cursor:pointer}
-.element__description{display:flex;justify-content:space-between;align-items:center;padding:25px 21px 31px}
+.element__description{background-color:#fff;display:flex;justify-content:space-between;align-items:center;padding:25px 21px 31px}
 .element__title{max-width:190px;color:#000;font-size:24px;line-height:29px;font-weight:900;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;margin:0}@media screen and (max-width:1023px){.element__title{max-width:160px}}@media screen and (max-width:767px){.element__title{max-width:130px}}
 .element__like{width:21px;height:18px;background-image:url(images/element-like.df0c965524717a3fd8e9.svg);background-repeat:no-repeat;background-color:transparent;border:none;outline:none;cursor:pointer;padding:0;transition:opacity .2s ease-in-out}.element__like:hover{opacity:.6}
 .element__trash{width:18px;height:19px;background-image:url(images/element-trash.2af49b82d305a6ea3442.svg);background-repeat:no-repeat;background-color:transparent;border:none;outline:none;cursor:pointer;position:absolute;top:18px;right:15px;transition:opacity .2s ease-in-out}.element__trash:hover{opacity:.6}
 .element__like_active{background-image:url(images/element-like-active.a7ffe37dcb927ba0c46c.svg);opacity:1}.element__like_active:hover{opacity:1}
-.element{background-color:#fff;border-radius:10px;overflow:hidden;list-style:none;position:relative}
+.element{border-radius:10px;overflow:hidden;list-style:none;position:relative}
 .footer__copyright{font-size:18px;line-height:22px;color:#545454;margin:0}@media screen and (max-width:767px){.footer__copyright{font-size:14px;line-height:17px}}
 .footer{max-width:882px;margin:auto;padding:67px 0 60px}@media screen and (max-width:1023px){.footer{padding-left:27px;padding-right:27px}}@media screen and (max-width:767px){.footer{padding:48px 19px 36px}}
 
