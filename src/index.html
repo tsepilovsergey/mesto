@@ -11,7 +11,7 @@
     </header>
     <main class="content">
         <section class="profile">
-            <img class="profile__avatar" src="<%=require('./images/profile-avatar.jpg')%>" alt="Аватар">
+            <div class="profile__avatar"></div>
             <div class="profile__info">
                 <h1 class="profile__title">Жак-Ив Кусто</h1>
                 <button class="profile__edit-button" type="button"></button>
@@ -57,11 +57,33 @@
             </form>
         </div>
     </div>
+    <div class="popup popup-avatar">
+        <div class="popup__container">
+            <button class="popup__close-button" type="button"></button>
+            <h3 class="popup__title">Обновить аватар</h3>
+            <form class="popup__form popup__form-avatar" name="formAvatar" novalidate>
+                <input class="popup__input popup__input_type_link" name="popupAvatar" type="url" id="avatar" autocomplete="off" placeholder="Ссылка на картинку" required>
+                <span id="avatar-error"></span>
+                <button class="popup__button" type="submit" disabled>
+                    Сохранить
+                </button>
+            </form>
+        </div>
+    </div>
     <div class="popup popup-image">
         <div class="popup__container-image">
             <button class="popup__close-button" type="button"></button>
             <img class="popup__fulled-image" src="#" alt="Картинка места">
             <h3 class="popup__title-image"></h3>
+        </div>
+    </div>
+    <div class="popup popup-confirm">
+        <div class="popup__container">
+            <button class="popup__close-button" type="button"></button>
+            <h3 class="popup__title">Вы уверены?</h3>
+            <button class="popup__button" type="submit">
+                Да
+            </button>
         </div>
     </div>
     <template id="element-template">
@@ -70,7 +92,10 @@
             <img class="element__image" src="#" alt="Картинка места">
             <div class="element__description">
                 <h2 class="element__title"></h2>
-                <button class="element__like" type="button"></button>
+                <div class="element__likes">
+                    <button class="element__like" type="button"></button>
+                    <p class="element__likes-number">0</p>
+                </div>
             </div>
         </li>
     </template>

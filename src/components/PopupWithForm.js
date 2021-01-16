@@ -28,5 +28,13 @@ export class PopupWithForm extends Popup {
         this._popupForm.reset();
         super.close();
     }
+
+    showLoading(load) {
+        if(load){
+            this._popupForm.querySelector('.popup__button').textContent = 'Сохранить';
+        } else {
+            this._popupForm.querySelector('.popup__button').textContent = 'Сохранение...';
+        }
+    }
     
 }

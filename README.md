@@ -1,4 +1,4 @@
-# Проект 8: Место
+# Проект 9: Место
 
 ### Обзор
 * Интро
@@ -18,7 +18,9 @@
 
 * [Ссылка на макет в Figma](https://www.figma.com/file/nlYpT4VhFiwimn2YlncrcF/JavaScript.-Sprint-5);
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/XNaGNEZD5NEjeyJzAT4gMb/JavaScript.-Sprint-6).
+* [Ссылка на макет в Figma](https://www.figma.com/file/XNaGNEZD5NEjeyJzAT4gMb/JavaScript.-Sprint-6);
+
+* [Ссылка на макет в Figma](https://www.figma.com/file/PSdQFRHoxXJFs2FH8IXViF/JavaScript-9).
 
 **Картинки**
 
@@ -37,7 +39,9 @@
 * редактирование, сохранение/несохранение данных профиля;
 * использование разных шрифтов;
 * использование навигации, анимации;
-* доступность интерфейса для пользователя.
+* доступность интерфейса для пользователя;
+* работа с асинхронными функциями;
+* работа с API.
 
 ### Создан с помощью:
 1. Система контроля версий: Git Bash(командная строка), GitHub.
@@ -50,6 +54,10 @@
    * PopupWithImage.js;
    * Section.js;
    * UserInfo.js;
-   * index.js.
+   * index.js;
+   * constants.js;
+   * PopupConfirm.js;
+   * Api.js.
 4. Проект собран с помощью webpack.
 5. Использование парадигмы ООП в написании кода.
+6. Подключение страницы к серверу.
