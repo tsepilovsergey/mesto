@@ -9,7 +9,7 @@
 .popup__button_disabled{background-color:transparent;color:#000;opacity:.2;border:1px solid #000;pointer-events:none}
 .popup__close-button{background-image:url(images/popup-close.888d78eb885c525f5e00.svg);background-repeat:no-repeat;background-position:50%;background-color:transparent;background-size:contain;transform:rotate(90deg);border:none;width:35px;height:35px;position:absolute;top:-40px;right:-40px;cursor:pointer;outline:none;padding:0;transition:opacity .2s ease-in-out}.popup__close-button:hover{opacity:.6}@media screen and (max-width:767px){.popup__close-button{width:25px;height:25px;top:-30px;right:-30px}}
 .popup__container-image{max-width:75vw;max-height:75vh;position:relative;display:flex;flex-direction:column;cursor:auto}
-.popup__fulled-image{width:100%}
+.popup__fulled-image{max-width:75vw;max-height:75vh}
 .popup__title-image{font-weight:400;font-size:12px;line-height:15px;margin:10px 0 0}
 
 .popup__error_visible{font-size:12px;line-height:15px;color:red;position:absolute;padding-top:5px}
