@@ -9,10 +9,10 @@ export class Section {
         });
     }
 
-    initialItems({ data, renderer }) {
-        this._items = data;
-        this._renderer = renderer;
-        this._renderItems();
+    initialItems({ data, renderer }) { 
+        this._items = data; 
+        this._renderer = renderer; 
+        this._renderItems(); 
     }
 
     appendItem(element) {

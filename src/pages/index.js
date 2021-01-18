@@ -169,32 +169,33 @@ api.getUserInfo()
     .then((users) => {
         userInfo.setUserInfo(users);
     })
-    .catch((error) => {
-        console.log(error);
-    })
-
-api.getInitialCards()
-    .then((items) => {
-        const userId = userInfo.getUserInfo().id;
-        items.forEach((item) => {
-            if(item.likes.length) {
-                item.likes.forEach((like) => {
-                    if(like._id === userId) {
-                        item.cardLike = true;
+    .then(() => {
+        api.getInitialCards()
+            .then((items) => {
+                const userId = userInfo.getUserInfo().id;
+                items.forEach((item) => {
+                    if(item.likes.length) {
+                        item.likes.forEach((like) => {
+                            if(like._id === userId) {
+                                item.cardLike = true;
+                            }
+                        })
+                    }
+                    if(item.owner._id === userId) {
+                        item.cardOwner = true;
                     }
                 })
-            }
-            if(item.owner._id === userId) {
-                item.cardOwner = true;
-            }
-        })
-        cardList.initialItems({
-            data: items,
-            renderer: (item) => {
-                const cardElement = createCard(item);
-                cardList.appendItem(cardElement);
-            }
-        })
+                cardList.initialItems({
+                    data: items,
+                    renderer: (item) => {
+                        const cardElement = createCard(item);
+                        cardList.appendItem(cardElement);
+                    }
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     })
     .catch((error) => {
         console.log(error);
